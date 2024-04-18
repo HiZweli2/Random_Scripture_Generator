@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pastor App</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Bible Verse Reader</h1>
+        <div id="progress"></div>
+        <div id="settings">
+            <label for="translation">Choose Translation:</label>
+            <select id="translation">
+                <option value="en-kjv">King James Version (KJV)</option>
+                <option value="en-asv">American Standard Version (ASV)</option>
+                <!-- Add more translations as needed -->
+            </select>
+    
+            <label for="book">Choose Book:</label>
+            <select id="book">
+                <!-- Options will be populated by JavaScript -->
+            </select>
+            <button id="startButton">Start Reading</button>
+        </div>
+    
+        <div id="versePopup" class="hidden">
+            <p id="verseText"></p>
+            <button onclick="markAsRead()">DONE</button>
+            <button onclick="postpone()">LATER</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
